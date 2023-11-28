@@ -44,9 +44,9 @@ async function getBreeds() {
         animation.addEventListener('animationiteration', () => {
             const currentSrc = animation.getAttribute('src');
             if (currentSrc === '../src/img/cat_white.png') {
-                animation.setAttibute('src', '../src/img/cat_black.png');
+                animation.setAttibute('src', 'img/cat_black.png');
             } else {
-                animation.setAttribute('src', '../src/img/cat_white.png');
+                animation.setAttribute('src', 'img/cat_white.png');
             }
         });
 
