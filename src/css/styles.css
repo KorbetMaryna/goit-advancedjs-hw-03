@@ -30,7 +30,7 @@ body {
     border-color: #fff;
     background-color: #fff;
     border-radius: 50%;
-    animation: moveAnimation 8s linear infinite;
+    animation: moveAnimation 8s linear infinite, changeColor 4s linear infinite alternate;
 }
 
 @keyframes moveAnimation {
@@ -44,6 +44,18 @@ body {
 
     100% {
         transform: translateX(0) rotate(360deg);
+    }
+}
+
+@keyframes changeColor {
+
+    0%,
+    100% {
+        background-color: #fff;
+    }
+
+    50% {
+        background-color: #000;
     }
 }
 

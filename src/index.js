@@ -5,7 +5,6 @@ import 'izitoast/dist/css/iziToast.css';
 
 const select = document.querySelector('.breed-select');
 const catInfo = document.querySelector('.cat-info');
-const animation = document.querySelector('.animation');
 const loader = document.querySelector('.loader');
 const error = document.querySelector('.error');
 
@@ -40,15 +39,6 @@ async function getBreeds() {
         });
         
         toggleLoader(false);
-        
-        animation.addEventListener('animationiteration', () => {
-            const currentSrc = animation.getAttribute('src');
-            if (currentSrc === '/img/cat_white.png') {
-                animation.setAttribute('src', '/img/cat_black.png');
-            } else {
-                animation.setAttribute('src', '/img/cat_white.png');
-            }
-        });
 
         select.addEventListener('change', fetchCatInfo);
 
